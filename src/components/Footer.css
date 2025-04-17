@@ -1,72 +1,91 @@
-/* Footer Styling */
 .footer {
-    background-color: #1f1f1f;
-    color: white;
-    padding: 20px;
-    left: 0;
-   
-    width: 100%;
+    background-color: #0d0d0d; /* Midnight black */
+    color: #ffffff;
+    padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 10;
   }
   
   .footer-logo h2 {
-    font-size: 26px;
     margin: 0;
-    font-weight: bold;
-    color: #ffcc00;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .footer-logo h2:hover {
-    transform: scale(1.1); /* Hover animation on company logo */
+    font-size: 2rem;
+    color: #ffffff;
+    letter-spacing: 2px;
+    animation: fadeInUp 1s ease-out;
   }
   
   .footer-text {
     margin-top: 10px;
-    font-size: 14px;
-    color: #ccc;
+    font-size: 0.95rem;
+    color: #aaaaaa;
   }
   
-  .footer-links p {
+  .footer-links {
     margin-top: 15px;
   }
   
   .footer-links a {
+    color: #888;
     text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
+    margin: 0 8px;
     transition: color 0.3s ease, transform 0.3s ease;
   }
   
   .footer-links a:hover {
-    color: #ffcc00;
-    transform: scale(1.1); /* Hover effect for links */
+    color: #00ffff; /* Aqua hover */
+    transform: scale(1.1);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
     .footer-logo h2 {
-      font-size: 22px;
+      font-size: 1.5rem;
     }
   
-    .footer-links p {
-      font-size: 14px;
+    .footer-text {
+      font-size: 0.85rem;
+    }
+  
+    .footer-links a {
+      font-size: 0.9rem;
+      display: inline-block;
+      margin: 6px 5px;
     }
   }
   
   @media (max-width: 480px) {
+    .footer {
+      padding: 30px 10px;
+    }
+  
     .footer-logo h2 {
-      font-size: 20px;
+      font-size: 1.3rem;
     }
   
     .footer-text {
-      font-size: 12px;
+      font-size: 0.8rem;
     }
   
-    .footer-links p {
-      font-size: 12px;
+    .footer-links {
+      margin-top: 10px;
+    }
+  
+    .footer-links a {
+      font-size: 0.85rem;
     }
   }
   
