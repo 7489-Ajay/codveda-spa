@@ -1,0 +1,196 @@
+/* Home Section */
+.home {
+    position: relative;
+    background: linear-gradient(to bottom right, #0f0f0f, #1a1a1a); /* Midnight black gradient */
+    padding: 80px 20px;
+    overflow: visible;
+    animation: fadeIn 1s ease-in-out;
+    min-height: 85vh;
+    color: #ffffff;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+  }
+  
+  /* Container Layout */
+  .home-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Text Section */
+  .home-text {
+    text-align: center; /* Center the text */
+    animation: slideUp 1.2s ease forwards;
+  }
+  
+  .home-text h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    background: linear-gradient(90deg, #00ffe0, #3b82f6, #00ffe0);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 4s linear infinite;
+  }
+  
+  .home-text p {
+    font-size: 1.1rem;
+    color: #cbd5e1; /* Soft white-gray */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+  
+  /* CTA Buttons */
+  .home-cta {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 999px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .btn-primary {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+  }
+  
+  .btn-primary:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+  }
+  
+  .btn-secondary {
+    background: transparent;
+    color: #3b82f6;
+    border: 2px solid #3b82f6;
+  }
+  
+  .btn-secondary:hover {
+    background: #3b82f6;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+  }
+  
+  /* Image */
+  .home-illustration img {
+    max-width: 350px;
+    width: 100%;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px #3b82f6);
+  }
+  
+  /* Desktop adjustments */
+  @media (min-width: 768px) {
+    .home-container {
+      flex-direction: row; /* Change layout to row for larger screens */
+      text-align: left;
+    }
+  
+    .home-text,
+    .home-illustration {
+      flex: 1;
+    }
+  
+    .home-text {
+      padding-right: 20px; /* Add some space to the right of text */
+    }
+  
+    .home-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .home {
+      padding-top: 90; /* No extra space on mobile */
+      align-items: flex-start; /* Content starts from the top */
+    }
+  
+    .home-container {
+      padding-top: 100px; /* Push content slightly down from the top */
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .home-text h1 {
+      font-size: 2.2rem; /* Adjust heading size for mobile */
+      margin-bottom: 1.5rem;
+    }
+  
+    .home-text p {
+      font-size: 1rem; /* Adjust paragraph size for mobile */
+      margin-bottom: 2rem;
+    }
+  
+    .home-illustration img {
+      max-width: 70%; /* Adjust the logo size for mobile */
+      filter: drop-shadow(0 0 20px #3b82f6);
+    }
+  }
+  
+  /* Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes textShine {
+    0% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+  

@@ -1,0 +1,158 @@
+/* General Styles for About Section */
+.about-section {
+    background-color: #121212; /* Midnight black */
+    color: #ffffff;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+    animation: fadeInUp 1.5s ease-out forwards;
+  }
+  
+  /* Header */
+  .about-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(90deg, #00ffe0, #3b82f6, #00ffe0);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShine 4s linear infinite;
+  }
+  
+  /* Paragraphs */
+  .about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #d1d1d1;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-out forwards;
+  }
+  
+  /* Founder Quote */
+  .founder-quote blockquote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #a3a3a3;
+    position: relative;
+    margin: 2rem 0;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+  
+  .founder-quote .ceo {
+    display: block;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1.8s ease-out forwards;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes textShine {
+    0% {
+      background-position: 200% center;
+    }
+    100% {
+      background-position: -200% center;
+    }
+  }
+  
+  /* Hover Effects */
+  .about-content h1:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .about-content p:hover {
+    color: #3b82f6;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .founder-quote blockquote:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    color: #00ffe0;
+  }
+  
+  /* Responsive Styles */
+  
+  /* Tablet and Smaller Devices */
+  @media (max-width: 1024px) {
+    .about-content h1 {
+      font-size: 2.4rem;
+    }
+  
+    .about-content p {
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+  
+    .founder-quote blockquote {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Mobile Devices */
+  @media (max-width: 768px) {
+    .about-section {
+      padding: 60px 15px;
+    }
+  
+    .about-content h1 {
+      font-size: 2.2rem;
+    }
+  
+    .about-content p {
+      font-size: 0.95rem;
+    }
+  
+    .founder-quote blockquote {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .about-content p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  

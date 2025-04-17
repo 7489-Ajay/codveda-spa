@@ -1,0 +1,135 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111; /* Midnight black background */
+    padding: 0.6rem 1rem;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+   
+  }
+  
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .logo-icon {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+    animation: rotateLogo 4s linear infinite;
+  }
+  
+  @keyframes rotateLogo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .logo-text {
+    color: #ffffffd8;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 3.5rem; /* Increased gap between items */
+  }
+  
+  .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-menu a:hover {
+    color: #426cd8;
+    transform: translateY(-3px);
+  }
+  
+  /* Menu toggle button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 3.5rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .menu-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .nav-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #111; /* Midnight black background */
+      clip-path: circle(0% at 90% -10%);
+      transition: clip-path 0.6s ease;
+    }
+  
+    .nav-menu.open {
+      clip-path: circle(200% at 90% -10%);
+    }
+  
+    .nav-menu ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem; /* Increased gap for mobile view */
+      padding: 2rem 0;
+      margin: 0;
+    }
+  
+    .nav-menu li {
+      margin: 0;
+    }
+  }
+  
+  

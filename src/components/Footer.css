@@ -1,0 +1,72 @@
+/* Footer Styling */
+.footer {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px;
+    left: 0;
+   
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer-logo h2 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: bold;
+    color: #ffcc00;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .footer-logo h2:hover {
+    transform: scale(1.1); /* Hover animation on company logo */
+  }
+  
+  .footer-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .footer-links p {
+    margin-top: 15px;
+  }
+  
+  .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #ffcc00;
+    transform: scale(1.1); /* Hover effect for links */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-logo h2 {
+      font-size: 22px;
+    }
+  
+    .footer-links p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-logo h2 {
+      font-size: 20px;
+    }
+  
+    .footer-text {
+      font-size: 12px;
+    }
+  
+    .footer-links p {
+      font-size: 12px;
+    }
+  }
+  
