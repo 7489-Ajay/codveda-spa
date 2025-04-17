@@ -124,9 +124,9 @@ html, body {
       clip-path: circle(0% at 90% -10%);
       transition: clip-path 0.6s ease;
 
-      display: flex;              /* ✅ Add this */
-      justify-content: center;    /* ✅ Center horizontally */
-      align-items: center;        /* ✅ Center vertically */
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-direction: column;
     }
   
@@ -140,10 +140,15 @@ html, body {
       gap: 1.5rem; /* Increased gap for mobile view */
       padding: 2rem 0;
       margin: 0;
+      width: 100%;         /* ✅ */
+      text-align: center;  
     }
   
     .nav-menu li {
       margin: 0;
+
+      width: 100%;         /* ✅ */
+      text-align: center;  
     }
   }
   
